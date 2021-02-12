@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <p>
+    <strong>Latitude:</strong>
+    <%= @itinerary.latitude %>
+  </p>
+
+  <p>
+    <strong>Longuitude:</strong>
+    <%= @itinerary.longuitude %>
+  </p>
+
+  <%= link_to 'Editar', edit_itinerary_path(@itinerary) %> |
+  <%= link_to 'Voltar', bus_lines_path %>
+</div>

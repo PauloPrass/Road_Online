@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+  <div class="container_title">
+      <div class="div_title">
+          <h1>Itineraries</h1>
+      </div>
+  </div>
+
+  <table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longuitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itineraries.each do |itinerary| %>
+      <tr>
+        <td><%= itinerary.latitude %></td>
+        <td><%= itinerary.longuitude %></td>
+        <td><%= link_to 'Show', itinerary %></td>
+        <td><%= link_to 'Edit', edit_itinerary_path(itinerary) %></td>
+        <td><%= link_to 'Destroy', itinerary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'Novo itinerário', new_itinerary_path %>
